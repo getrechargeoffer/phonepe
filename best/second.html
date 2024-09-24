@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1196658384999045');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1196658384999045&ev=PageView&noscript=1"
+/></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    .navbar-brand {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+
+    .recharge-box {
+        width: 1089px;
+        /* Set width to 1089 pixels */
+        height: 55px;
+        /* Set height to 55 pixels */
+        background-color: #5F259F;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        /* Center the box horizontally */
+    }
+
+    .navbar-brand svg {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .prl {
+        color: #5F259F;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        margin-left: auto;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .responsive-box {
+        background-color: #E9D5FF;
+        width: 100%;
+        height: 150px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .new-text {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+        margin-bottom: 5px;
+    }
+
+    .offer-text {
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+    }
+
+    @media (max-width: 576px) {
+        .navbar-brand svg {
+            width: 30px;
+            height: 30px;
+        }
+        .logo {
+            max-width: 150px;
+        }
+        .prl {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .responsive-box {
+            height: auto;
+            /* Adjusts the height based on content */
+        }
+        .new-text,
+        .offer-text {
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+        }
+    }
+
+    .main-box {
+        width: 100%;
+        max-width: 1099px;
+        height: auto;
+        padding: 20px;
+        background-color: #E9D5FF;
+        margin: 20px auto;
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .new-label {
+        background-color: red;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+        width: 46px;
+        height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .price-section {
+        margin-top: 10px;
+    }
+
+    .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .crossed-price {
+        text-decoration: line-through;
+        margin-left: 10px;
+        font-size: 20px;
+        color: #555;
+    }
+
+    .number-boxes {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .number-box {
+        width: 23%;
+        padding: 6px;
+        background-color: transparent;
+        text-align: justify;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: boldER;
+        color: #333;
+    }
+
+    .Data-box {
+        width: 23%;
+        padding: -15px;
+        background-color: transparent;
+        text-align: justify;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .final img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        /* Optional: Adds some space between the images */
+    }
+
+    .image-box {
+        height: 100%;
+        width: 95%;
+        padding-left: 237px;
+        margin-top: -28px;
+    }
+
+    @media (max-width: 1200px) {
+        .top-section {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .image-box img {
+            width: 100%;
+            height: auto;
+        }
+        .final img {
+            padding: 10px;
+            /* Adjust padding for smaller screens */
+        }
+    }
+
+    .pass-box {
+        width: 100%;
+        max-width: 1089px;
+        height: 80px;
+        background-color: #f8f8f8;
+        /* Off white color */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .recharge-text {
+        font-size: 26px;
+        color: #333;
+        /* Dark text color */
+        flex-shrink: 0;
+    }
+
+    .recharge-amount {
+        flex-grow: 1;
+        margin-left: 10px;
+        font-size: 16px;
+        color: #333;
+        /* Dark text color */
+        margin-top: 17px;
+        font-weight: 800;
+    }
+
+    .change-link {
+        font-size: 16px;
+        color: #007bff;
+        /* Blue link color */
+        text-decoration: none;
+    }
+
+    .change-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive Design */
+
+    @media (max-width: 1089px) {
+        .recharge-box {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .recharge-box {
+            flex-direction: column;
+            align-items: center;
+            height: 55px;
+        }
+        .change-link {
+            margin-top: 10px;
+        }
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: #5F259F;" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+                <img src="img/logo.png" alt="Logo" class="logo">
+            </a>
+            <svg class="prl" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+        </div>
+    </nav>
+    <div class="pass-box">
+        <span class="recharge-text">RECHARGE FOR :</span>
+        <p class="recharge-amount" id="phone-number"></p>
+        <a href="index.php" class="change-link">CHANGE</a>
+    </div>
+    <div class="responsive-box">
+        <div class="new-text">NEW!</div>
+        <div class="offer-text">RECHARGE & OFFERS</div>
+    </div>
+    <div class="main-box">
+        <div class="top-section">
+            <div class="new-label">NEW</div>
+            <div class="price-section">
+                <span class="price">₹ 389</span>
+                <span class="crossed-price">₹ 2499</span>
+            </div>
+            <div class="image-box">
+                <img src="img/5gtagimageprice.ea7b691f69d08405f9e831d11cba2c17.svg" alt="Image" style="max-width: 150px;">
+            </div>
+        </div>
+
+        <div class="number-boxes">
+            <div class="number-box">VALIDITY</div>
+            <div class="number-box">DATA</div>
+            <div class="number-box">Voice</div>
+            <div class="number-box">SMS</div>
+        </div>
+        <div class="number-boxes">
+            <div class="Data-box">12 MONTH</div>
+            <div class="Data-box">2 G.B/DAY</div>
+            <div class="Data-box">UNLIMITED</div>
+            <div class="Data-box">300/PER DAY</div>
+        </div>
+
+        <div class="recharge-box" onclick="handleRechargeClick('₹ 389')">RECHARGE</div>
+    </div>
+    <div class="main-box">
+        <div class="top-section">
+            <div class="new-label">NEW</div>
+            <div class="price-section">
+                <span class="price">₹ 279</span>
+                <span class="crossed-price">₹ 1999</span>
+            </div>
+            <div class="image-box">
+                <img src="img/5gtagimageprice.ea7b691f69d08405f9e831d11cba2c17.svg" alt="Image" style="max-width: 150px;">
+            </div>
+        </div>
+
+        <div class="number-boxes">
+            <div class="number-box">VALIDITY</div>
+            <div class="number-box">DATA</div>
+            <div class="number-box">Voice</div>
+            <div class="number-box">SMS</div>
+        </div>
+        <div class="number-boxes">
+            <div class="Data-box">6 MONTH</div>
+            <div class="Data-box">2 G.B/DAY</div>
+            <div class="Data-box">UNLIMITED</div>
+            <div class="Data-box">100/PER DAY</div>
+        </div>
+
+        <div class="recharge-box" onclick="handleRechargeClick('₹ 279')">RECHARGE</div>
+    </div>
+    <div class="main-box">
+        <div class="top-section">
+            <div class="new-label">NEW</div>
+            <div class="price-section">
+                <span class="price">₹ 249</span>
+                <span class="crossed-price">₹ 1299</span>
+            </div>
+            <div class="image-box">
+                <img src="img/5gtagimageprice.ea7b691f69d08405f9e831d11cba2c17.svg" alt="Image" style="max-width: 150px;">
+            </div>
+        </div>
+
+        <div class="number-boxes">
+            <div class="number-box">VALIDITY</div>
+            <div class="number-box">DATA</div>
+            <div class="number-box">Voice</div>
+            <div class="number-box">SMS</div>
+        </div>
+        <div class="number-boxes">
+            <div class="Data-box">84 DAYS</div>
+            <div class="Data-box">3 G.B/DAY</div>
+            <div class="Data-box">UNLIMITED</div>
+            <div class="Data-box">150/PER DAY</div>
+        </div>
+
+        <div class="recharge-box" onclick="handleRechargeClick('₹ 249')">RECHARGE</div>
+
+    </div>
+    <div class="main-box">
+        <div class="top-section">
+            <div class="new-label">NEW</div>
+            <div class="price-section">
+                <span class="price">₹ 199</span>
+                <span class="crossed-price">₹ 999</span>
+            </div>
+            <div class="image-box">
+                <img src="img/5gtagimageprice.ea7b691f69d08405f9e831d11cba2c17.svg" alt="Image" style="max-width: 150px;">
+            </div>
+        </div>
+
+        <div class="number-boxes">
+            <div class="number-box">VALIDITY</div>
+            <div class="number-box">DATA</div>
+            <div class="number-box">Voice</div>
+            <div class="number-box">SMS</div>
+        </div>
+        <div class="number-boxes">
+            <div class="Data-box">84 DAYS</div>
+            <div class="Data-box">2 G.B/DAY</div>
+            <div class="Data-box">UNLIMITED</div>
+            <div class="Data-box">80/PER DAY</div>
+        </div>
+
+        <div class="recharge-box" onclick="handleRechargeClick('₹ 199')">RECHARGE</div>
+    </div>
+    <div class="main-box">
+        <div class="top-section">
+            <div class="new-label">NEW</div>
+            <div class="price-section">
+                <span class="price">₹ 169</span>
+                <span class="crossed-price">₹ 749</span>
+            </div>
+            <div class="image-box">
+                <img src="img/5gtagimageprice.ea7b691f69d08405f9e831d11cba2c17.svg" alt="Image" style="max-width: 150px;">
+            </div>
+        </div>
+
+        <div class="number-boxes">
+            <div class="number-box">VALIDITY</div>
+            <div class="number-box">DATA</div>
+            <div class="number-box">Voice</div>
+            <div class="number-box">SMS</div>
+        </div>
+        <div class="number-boxes">
+            <div class="Data-box">84 DAYS</div>
+            <div class="Data-box">1.5 G.B/DAY</div>
+            <div class="Data-box">UNLIMITED</div>
+            <div class="Data-box">80/PER DAY</div>
+        </div>
+
+        <div class="recharge-box" onclick="handleRechargeClick('₹ 169')">RECHARGE</div>
+    </div>
+
+
+    </div>
+    <div class="final">
+        <img src="img/FL.png" alt="Final Image 1">
+        <img src="img/FL1.png" alt="Final Image 2">
+    </div>
+    <script>
+        function handleRechargeClick(price) {
+            // Replace with actual parameters as required
+            const phoneNumber = localStorage.getItem('phoneNumber') || 'defaultPhoneNumber';
+            const encodedPhoneNumber = encodeURIComponent(phoneNumber);
+            const amount = price.replace('₹ ', ''); // Remove currency symbol
+
+            // Create the deep link URL
+            const url = `phonepe://pay?ver=01&mode=19&pa=digitalunicorn668059.rzp@icici&pn=Digitalunicorn&tr=RZPP0hDkQOcTq7YGaqrv2&cu=INR&mc=8241&qrMedium=04&tn=ReceiveRecharge&am=${amount}`;
+
+            // Redirect to the URL
+            window.location.href = url;
+        }
+        const phoneNumber = localStorage.getItem('phoneNumber');
+        document.getElementById('phone-number').textContent = phoneNumber;
+    </script>
+    <script>
+        // Function to get URL query string parameter
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get phone number from query string and display in the p tag
+        const phoneNumber = getQueryParam('phone');
+        document.getElementById('phone-number').textContent = phoneNumber;
+    </script>
+</body>
+
+</html>
